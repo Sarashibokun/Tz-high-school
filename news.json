@@ -1,0 +1,32 @@
+[
+    {
+        "title": "入試情報 - 学校推薦型選抜開始",
+        "date": "2024-3-29",
+        "description": "新しい入学者...参戦!",
+        "url": "#exam"
+    },
+    {
+        "title": "学校行事 - 運動会イベント",
+        "date": "2024-06-14",
+        "description": "バレーからラリーまで! 皆集えー!!",
+        "url": "#event"
+    },
+    {
+        "title": "就職情報 - インターンシップ募集",
+        "date": "2024-07-15",
+        "description": "スーパーの店長のリアルを体験!? Super Market Simulator",
+        "url": "https://store.steampowered.com/app/2670630/Supermarket_Simulator/?l=japanese"
+    },
+    {
+        "title": "部活動 - ナノブレイ部新設!",
+        "date": "2024-11-01",
+        "description": "皆も一緒に! Let's nano me!!",
+        "url": "#ryujin"
+    },
+    {
+        "title": "部活動 - TRPG部新設!",
+        "date": "2024-11-01",
+        "description": "お風呂の温度は1d100度!",
+        "url": "https://youtu.be/G6pCxPDy_9g?si=LzujfwMIsI3yQ7sF"
+    }
+]
