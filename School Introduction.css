@@ -1,0 +1,370 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
+
+header h1 a {
+    color: white; /* 文字の色を白に設定 */
+    text-decoration: none; /* リンクの下線を消す */
+}
+
+.sns-links {
+    position: absolute;
+    top: 20px; /* お好みの位置に調整 */
+    right: 20px; /* お好みの位置に調整 */
+    display: flex;
+    gap: 10px;
+}
+
+.sns-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sns-links ul li {
+    display: inline-block;
+}
+
+.sns-links ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.sns-links ul li a:hover {
+    text-decoration: underline;
+}
+
+.sns-links form {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu {
+    position: absolute;
+    top: 60px; /* お好みの位置に調整 */
+    right: 20px; /* お好みの位置に調整 */
+    display: flex;
+    gap: 10px;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul li {
+    display: inline-block;
+}
+
+.menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.menu ul li a:hover {
+    text-decoration: underline;
+}
+
+/* メニュー全体のスタイル */
+.main-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around; /* アイテム間のスペースを均等に配置 */
+    background-color: #333;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+/* メニュー項目 */
+.main-menu ul li {
+    position: relative;
+    padding: 10px 20px;
+    margin: 0;
+    border-right: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    color: white;
+}
+
+/*.main-menu ul li:last-child {*/
+    /*border-right: none;*/
+    /*border-left: none;*/
+/*}*/
+/* サブメニュー */
+.main-menu ul li .sub-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: black;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.main-menu ul li:hover .sub-menu {
+    display: block; /* 親メニューにマウスが乗ったときサブメニューを表示 */
+}
+
+.sub-menu li {
+    padding: 10px;
+}
+
+.sub-menu li a {
+    text-decoration: none;
+    color: white;
+}
+
+/* 親メニューリンクのスタイル */
+.main-menu ul li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
+
+main {
+    padding: 20px;
+}
+
+/* ニュースセクション全体 */
+.news-section {
+    padding: 20px;
+    text-align: left;
+    font-family: 'Arial', sans-serif;
+}
+
+/* NEWSのタイトル */
+.news-section h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.news-section .subtitle {
+    color: rgb(0, 0, 0);
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+/* "一覧を見る" のリンク */
+.news-section a {
+    float: right;
+    color: #9a9a9a;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.news-section a:hover {
+    text-decoration: underline;
+}
+
+/* カテゴリーボタンのスタイル */
+.news-categories {
+    margin-top: 20px;
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+}
+
+.news-categories nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap; /* ボタンが画面幅を超えた場合に折り返し */
+}
+
+.news-categories nav ul li {
+    margin: 0;
+}
+
+.news-categories nav ul li a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: #9a9a9a;
+    border: 2px solid #9a9a9a;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.news-categories nav ul li a:hover {
+    background-color: #a1a1a1;
+    color: white;
+}
+
+/* ニュースリスト全体 */
+#newsList {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 自動的に列を調整 */
+    gap: 20px; /* カード間の余白 */
+    padding: 20px;
+    background-color: #f9f9f9;
+    max-width: 1200px;
+    margin: 0 auto; /* 中央寄せ */
+}
+
+/* ニュースカードのスタイル */
+.news-item {
+    background-color: white;
+    border-radius: 8px; /* 角を丸める */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 影を追加して浮き上がらせる */
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.news-item:hover {
+    transform: translateY(-5px); /* ホバー時に浮き上がる */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* ホバー時の影を強調 */
+}
+
+/* ニュースタイトル */
+.news-item h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* 日付のスタイル */
+.news-item p:nth-of-type(1) {
+    font-size: 0.9rem;
+    color: #999; /* 日付の色を淡くする */
+    margin-bottom: 10px;
+}
+
+/* 説明文のスタイル */
+.news-item p:nth-of-type(2) {
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.5;
+}
+
+/* ページネーションボタンのスタイル */
+#pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination-btn {
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    padding: 10px 15px;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.pagination-btn:hover {
+    background-color: #ddd;
+}
+
+.pagination-btn.active {
+    background-color: #333;
+    color: white;
+}
+
+/* ルールのタイトル */
+.rule h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+/* "ルールタイトル" のリンク */
+.rule h1 a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.rule h1 a:hover {
+    text-decoration: underline;
+}
+
+/* ルールリスト全体 */
+#ruleList {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 自動的に列を調整 */
+    gap: 20px; /* カード間の余白 */
+    padding: 20px;
+    background-color: #f9f9f9;
+    max-width: 1200px;
+    margin: 0 auto; /* 中央寄せ */
+}
+
+/* ルールカードのスタイル */
+.rules-item {
+    background-color: white;
+    border-radius: 8px; /* 角を丸める */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 影を追加して浮き上がらせる */
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-decoration: none;
+}
+
+.rules-item:hover {
+    transform: translateY(-5px); /* ホバー時に浮き上がる */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* ホバー時の影を強調 */
+    text-decoration: underline;
+}
+
+/* ルールタイトル */
+.rules-item h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* 日付のスタイル */
+.rules-item p:nth-of-type(1) {
+    font-size: 0.9rem;
+    color: #999; /* 日付の色を淡くする */
+    margin-bottom: 10px;
+}
+
+/* 説明文のスタイル */
+.rules-item p:nth-of-type(2) {
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.5;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    position: relative; /* フッターをコンテンツの後に配置 */
+    bottom: 0;
+    clear: both; /* フロートの影響を排除 */
+}
+
+@media (max-width: 600px) {
+    .main-menu ul {
+        display: block;
+    }
+
+    .main-menu ul li {
+        display: block;
+        margin-bottom: 10px;
+        border-right: none;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .main-menu ul li:last-child {
+        border-bottom: none;
+    }
+}
